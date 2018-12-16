@@ -1,0 +1,38 @@
+h1 {
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 85px;
+}
+
+
+.container {
+    margin: 0 auto;
+    background: white;
+    text-align: center;
+}
+
+#timer {
+    background: white;
+    text-align: center;
+    font-size: 45px;
+    margin: 0 auto;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.questions {
+    display: none;
+    font-size: 45px;
+}
+
+.results {
+    display:none;
+    margin: 0 auto;
+    background: white;
+    text-align: center;
+}
