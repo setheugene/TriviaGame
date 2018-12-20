@@ -3,7 +3,7 @@
 
 window.onload = function() {
 
-    var time = 15;
+    var time = 30;
     var hasStarted = false;
     var hasFinished = false;
     var total = 0;
@@ -23,6 +23,8 @@ if (hasStarted === false) {
     $("#button").hide(".start");
      countDown();
      $("#display").show(".questions");
+     $("#done").show(".done");
+     $("#timer").show(".timer");
 }
 
 var tm = setInterval(countDown,1000);
@@ -34,16 +36,29 @@ function countDown() {
         clearInterval(tm);
         hasFinished = true;
         done();
-        console.log("has finished: " + hasFinished);
-    }}
+        console.log(hasFinished);
+    }
          console.log(time);
          console.log(hasStarted);
 
+         $("#done").click(function() {
+            hasFinished = true;
+            done();
+         })
+
+console.log(hasFinished);
+
+if (hasFinished === true) {
+   done()
+}
+
 function done() {
+   $("#results").show(".results");
      $("#display").hide(".questions");
-     $("#results").show(".results");
+     $("#done").hide(".done");
+   //   $("#timer").hide(".timer");
      $("#timer").text("You got " + total + " Correct!!");
-        }
+}
 
         document.getElementById('1').onclick = function(){
             $("#results").append("Q1: Correct");
@@ -80,9 +95,10 @@ function done() {
          document.getElementById('8').onclick = function(){
             $("#results").append("      Q4: Wrong");
          }
-
- });
-
-
+      }
+ })
 }
+
+
+ 
 

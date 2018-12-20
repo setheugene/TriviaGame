@@ -31,8 +31,16 @@ body {
 }
 
 .results {
-    display:none;
+    display: none;
     margin: 0 auto;
     background: white;
     text-align: center;
+}
+
+#done {
+    display: none;
+}
+
+#timer {
+    display: none;
 }
